@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Roboto:wght@400;500&display=swap");
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+$white: #fff;
+$pointer: pointer;
+body {
+  margin: 0;
+  width: 1920px;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+button {
+  background: inherit;
+  border: none;
+  cursor: $pointer;
+}
+.main {
+  height: 1080px;
+  background: url("/img/bg.png") center center/cover no-repeat;
+  &__title {
+    font-size: 190px;
+    line-height: 170px;
+    width: 1472px;
+    text-transform: uppercase;
+    color: $white;
+    margin-left: 60px;
+    padding-top: 470px;
+  }
+}
+.header {
+  position: absolute;
+  height: 114px;
+  padding-top: 16px;
+  &__inner {
+    margin-left: 911px;
+    @include flex;
+    justify-content: space-between;
+    margin-right: 60px;
+  }
+  &__burger {
+    width: 52px;
+    height: 52px;
+    span {
+      width: 41.85px;
+      margin-top: 30px;
+      height: 1px;
+      background: $white;
+      display: block;
+      &:nth-child(2) {
+        margin-top: 6.34px;
+        margin-bottom: 38px;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    margin-top: 16px;
+    position: relative;
+  }
+  &__item {
+    width: 480px;
+    font-size: 22px;
+    line-height: 23px;
+    @include flex;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Alegreya", serif;
+    height: 45px;
+    border-top: 1px solid $white !important;
+    border-bottom: 1px solid $white !important;
+    &:nth-child(3) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 480px;
+        height: 32px;
+        width: 1px;
+        background: $white;
+        top: 7px;
+      }
+    }
+  }
+  .active {
+    background: $white;
+    color: #000;
+  }
+}
+.row {
+  display: flex;
+}
+.wrapper {
+  background: #f1f1f1;
+  overflow-y: hidden;
+  .hero {
+    padding-top: 100px;
+    height: 1980px;
+    &__text {
+      padding: 433px 219px 433px 219px;
+      font-size: 22px;
+      line-height: 142%;
+    }
+    &__title {
+      font-size: 109px;
+      line-height: 130%;
+      text-transform: uppercase;
+      margin-top: -107px;
+      width: 1150px;
+      margin-left: 281px;
+      height: 318px;
+      margin-bottom: 22px;
+      span {
+        color: $white;
+        mix-blend-mode: difference;
+      }
+    }
+    .text {
+      padding: 203px 191px 433px;
+      font-size: 22px;
+      line-height: 142%;
+      width: 932px;
+    }
+    .image {
+      background: #e5e5e5;
+      width: 720px;
+      height: 760px;
+      @include flex;
+      margin-left: 220px;
+    }
+  }
+}
+.slider {
+  margin-top: 100px;
+  height: 1080px;
+  padding-left: 48px;
+  &__wrapper {
+    width: 1824px;
+    @include flex;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #000;
+  }
+  &__header {
+    font-size: 42px;
+    line-height: 46px;
+    width: 395px;
+  }
+  &__button {
+    margin-left: 880px;
+    width: 403px;
+    height: 42px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 45px;
+    outline: none;
+    cursor: $pointer;
+    background: $white;
+  }
+  &-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: $pointer;
+    margin-left: 50px;
+    background: $white;
+    img {
+      width: 15px;
+      height: 16.8px;
+    }
+    &:hover img {
+      display: block;
+      margin-left: -3px;
+    }
+  }
+  .next {
+    background: #000;
+    margin-left: 12px;
+    &:hover img {
+      margin-left: 15px;
+    }
+  }
+  .row {
+    margin-top: 32px;
+    width: 1872px;
+    overflow: hidden;
+    height: 850px;
+    padding-bottom: 32px;
+    img {
+      border-radius: 220px;
+      display: block;
+      margin-left: 185px;
+      margin-top: 46px;
+      margin-right: 185px;
+    }
+  }
+  .line {
+    width: 1824px;
+    border-bottom: 1px solid #000;
+  }
+  &__item {
+    width: 778px;
+    height: 850px;
+    background: #e5e5e5;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      background: #000;
+      height: 850px;
+      position: absolute;
+    }
+    &:first-child::before {
+      display: none;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 100%;
+    width: 357px;
+    height: 32px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: "Alegreya", serif;
+    padding-top: 42px;
+    margin-left: 42px;
+  }
+  &__descr {
+    width: 372px;
+    height: 48px;
+    margin-top: 46px;
+    margin-left: 42px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 132%;
+  }
+}
+.footer {
+  height: 1080px;
+  margin-top: 100px;
+  position: relative;
+  img {
+    display: inline-block;
+    &:first-child {
+      margin-top: 160px;
+    }
+    &:nth-child(2) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 1190px;
+      height: 714px;
+    }
+  }
+  &__title {
+    right: 48px;
+    top: 60px;
+    position: absolute;
+    font-size: 122px;
+    line-height: 134px;
+    text-transform: uppercase;
+    width: 1142px;
+    span {
+      mix-blend-mode: difference;
+      color: $white;
+    }
+  }
+  &__wrapper {
+    position: absolute;
+    bottom: 227px;
+    right: 559px;
+    width: 1333px;
+    height: 260px;
+    background: #b52626;
+    mix-blend-mode: difference;
+    border-radius: 130px;
+  }
+  &__circle {
+    position: absolute;
+    right: 559px;
+    bottom: 227px;
+    width: 260px;
+    height: 260px;
+    @include flex;
+    justify-content: flex-start;
+    background: $white;
+    border-radius: 50%;
+    img {
+      margin: 0 10px 0 20px !important;
+      width: 16px;
+      height: 20px;
+    }
+    span {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+}
+h1 {
+  @include flex;
+  padding-top: 300px;
+  background: #e5e5e5;
+}
