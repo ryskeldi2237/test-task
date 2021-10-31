@@ -30,6 +30,64 @@ button {
     padding-top: 470px;
   }
 }
+.home {
+  background: url("/img/home.png") center center/cover no-repeat;
+  &__footer {
+    width: 1800px;
+    margin: 26px auto 0;
+    display: flex;
+    border-top: 1px solid $white;
+    padding-top: 28px;
+  }
+  &__wrapper {
+    width: 780px;
+    height: 260px;
+    position: absolute;
+    background: #b52626;
+    mix-blend-mode: difference;
+    border-radius: 130px;
+    right: 61px;
+    top: 470px;
+  }
+  &__circle {
+    position: absolute;
+    top: 470px;
+    right: 60px;
+    width: 260px;
+    height: 260px;
+    @include flex;
+    justify-content: flex-start;
+    background: #fff;
+    border-radius: 50%;
+    img {
+      margin: 0 10px 0 64px !important;
+      width: 16px;
+      height: 20px;
+      color: #5a6b6f;
+    }
+    span {
+      color: #5a6b6f;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    @include flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 0px 26px rgba(0, 0, 0, 0.16);
+    &:nth-child(2) {
+      margin-left: 121px;
+      margin-right: 1412px;
+    }
+  }
+}
 .header {
   position: absolute;
   height: 114px;
@@ -88,7 +146,7 @@ button {
     color: #000;
   }
 }
-.row {
+.wrapp {
   display: flex;
 }
 .wrapper {
@@ -135,9 +193,11 @@ button {
   margin-top: 100px;
   height: 1080px;
   padding-left: 48px;
+  position: relative;
   &__wrapper {
     width: 1824px;
     @include flex;
+    justify-content: flex-start;
     padding-bottom: 22px;
     border-bottom: 1px solid #000;
   }
@@ -157,64 +217,10 @@ button {
     cursor: $pointer;
     background: $white;
   }
-  &-btn {
-    width: 42px;
-    height: 42px;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 50%;
-    cursor: $pointer;
-    margin-left: 50px;
-    background: $white;
-    img {
-      width: 15px;
-      height: 16.8px;
-    }
-    &:hover img {
-      display: block;
-      margin-left: -3px;
-    }
-  }
-  .next {
-    background: #000;
-    margin-left: 12px;
-    &:hover img {
-      margin-left: 15px;
-    }
-  }
-  .row {
-    margin-top: 32px;
-    width: 1872px;
-    overflow: hidden;
-    height: 850px;
-    padding-bottom: 32px;
-    img {
-      border-radius: 220px;
-      display: block;
-      margin-left: 185px;
-      margin-top: 46px;
-      margin-right: 185px;
-    }
-  }
-  .line {
-    width: 1824px;
-    border-bottom: 1px solid #000;
-  }
   &__item {
     width: 778px;
     height: 850px;
     background: #e5e5e5;
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 1px;
-      background: #000;
-      height: 850px;
-      position: absolute;
-    }
-    &:first-child::before {
-      display: none;
-    }
   }
   &__title {
     font-size: 32px;
@@ -235,6 +241,67 @@ button {
     font-weight: 500;
     font-size: 18px;
     line-height: 132%;
+  }
+  .wrapp {
+    margin: 32px auto;
+    margin-top: 32px;
+    width: 778px;
+    overflow: hidden;
+    height: 850px;
+    img {
+      border-radius: 220px;
+      display: block;
+      margin-left: 185px;
+      margin-top: 46px;
+      margin-right: 185px;
+    }
+    .carousel {
+      position: static;
+      &-indicators {
+        display: none;
+      }
+      &-control {
+        &-prev,
+        &-next {
+          width: 42px;
+          height: 42px;
+          border: 1px solid #000000;
+          box-sizing: border-box;
+          border-radius: 50%;
+          opacity: 1;
+          &-icon {
+            width: 15px;
+            height: 16.8px;
+          }
+        }
+        &-prev {
+          left: 1776px;
+          &-icon {
+            background: url("/img/prev.svg") center center/cover no-repeat;
+          }
+          &:hover .carousel-control-prev-icon {
+            margin-left: -15px;
+          }
+        }
+        &-next {
+          background: #000;
+          right: 48px;
+          &-icon {
+            background: url("/img/next.svg") center center/cover no-repeat;
+          }
+          &:hover .carousel-control-next-icon {
+            margin-left: 15px;
+          }
+        }
+      }
+      &-item {
+        height: 850px;
+      }
+    }
+  }
+  .line {
+    width: 1824px;
+    border-bottom: 1px solid #000;
   }
 }
 .footer {

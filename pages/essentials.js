@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
     const products = await data.json()
     return {
       props: {
-        products:products.products
+        products : products.products
       },
     }
   }catch(error){

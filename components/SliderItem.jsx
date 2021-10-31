@@ -1,4 +1,3 @@
-import { UncontrolledCarousel, Row, Col } from "reactstrap";
 export default function SliderItem({item}) {
     return (
         <div className="slider__item">
