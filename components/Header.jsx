@@ -14,8 +14,8 @@ export default function Header() {
             <div className="header__wrapper">
                {
                    items.map((item, i) => (
-                       <button className={location.asPath === `/${items[i]}` ? 'header__item active': 'header__item'} 
-                       onClick={() => Router.push(item.replace(/\s/g, ''))} 
+                       <button className={`header__item ${location.asPath === '/'+items[i] ? 'active' : ''}`} 
+                       onClick={() => Router.push(item)} 
                        key={`${item}__${i}`}
                        >{item}</button>
                    ))
