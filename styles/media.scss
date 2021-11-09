@@ -76,6 +76,15 @@
         width: 90px;
         font-size: 11px;
       }
+      &__btn {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        img {
+          width: 10px;
+          height: 10px;
+        }
+      }
       .wrapp {
         height: 474px;
         width: 250px;
@@ -83,20 +92,6 @@
           width: 150px;
           height: 260px;
           margin-left: 50px;
-        }
-        .carousel-control-prev,
-        .carousel-control-next {
-          width: 30px;
-          height: 30px;
-          right: 0;
-          top: 8px;
-          &-icon {
-            width: 10px;
-            height: 10px;
-          }
-        }
-        .carousel-control-prev{
-          left: 300px;
         }
       }
       &__item {

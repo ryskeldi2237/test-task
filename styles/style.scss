@@ -221,6 +221,17 @@ button {
     width: 778px;
     height: 850px;
     background: #e5e5e5;
+    position: relative;
+    z-index: 0;
+    &::after {
+      content: "";
+      height: 850px;
+      width: 1px;
+      background: #000;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+    }
   }
   &__title {
     font-size: 32px;
@@ -243,9 +254,8 @@ button {
     line-height: 132%;
   }
   .wrapp {
-    margin: 32px auto;
-    margin-top: 32px;
-    width: 778px;
+    margin: 32px 0;
+    width: 1872px;
     overflow: hidden;
     height: 850px;
     img {
@@ -255,49 +265,28 @@ button {
       margin-top: 46px;
       margin-right: 185px;
     }
-    .carousel {
-      position: static;
-      &-indicators {
-        display: none;
-      }
-      &-control {
-        &-prev,
-        &-next {
-          width: 42px;
-          height: 42px;
-          border: 1px solid #000000;
-          box-sizing: border-box;
-          border-radius: 50%;
-          opacity: 1;
-          &-icon {
-            width: 15px;
-            height: 16.8px;
-          }
-        }
-        &-prev {
-          left: 1776px;
-          &-icon {
-            background: url("/img/prev.svg") center center/cover no-repeat;
-          }
-          &:hover .carousel-control-prev-icon {
-            margin-left: -15px;
-          }
-        }
-        &-next {
-          background: #000;
-          right: 48px;
-          &-icon {
-            background: url("/img/next.svg") center center/cover no-repeat;
-          }
-          &:hover .carousel-control-next-icon {
-            margin-left: 15px;
-          }
-        }
-      }
-      &-item {
-        height: 850px;
-      }
+  }
+  &__btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-left: 50px;
+    img {
+      width: 15px;
+      height: 16.8px;
     }
+    &:hover .prev img {
+      margin-left: -15px;
+    }
+    &:hover .next img {
+      margin-left: 15px;
+    }
+  }
+  .next {
+    background: #000;
+    margin-left: 12px;
   }
   .line {
     width: 1824px;

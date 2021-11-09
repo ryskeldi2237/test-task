@@ -1,6 +1,7 @@
 import '../styles/style.scss'
 import '../styles/media.scss'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'swiper/css';
+import 'swiper/css/navigation'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
